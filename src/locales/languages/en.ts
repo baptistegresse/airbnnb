@@ -23,7 +23,7 @@ export default {
   },
   "appartement": {
     "title": "Apartment",
-    "description": "Description",
+    "description": "With an unobstructed and private view, let yourself be transported by luxury and refinement. A fully equipped kitchen, a queen size bed. All household linen is provided. WiFi and a private secure garage at your disposal. Welcome to Burgundy for an unforgettable stay",
     "photos": "Photos",
     "supplementaryPhotos": "Additional Photos",
     "location": "Location",

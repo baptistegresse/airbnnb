@@ -24,6 +24,20 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
+import { Imperial_Script, Tinos } from 'next/font/google';
+
+
+const imperial = Imperial_Script({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+});
+
+const tinos = Tinos({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+});
 
 export default function Page() {
   const [startDate, setStartDate] = React.useState<Date>();
@@ -63,11 +77,11 @@ export default function Page() {
       <div className="w-screen mb-10 md:w-2/4">
         <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-900">
           <CardHeader className="p-4">
-            <CardTitle className="text-xl font-bold text-gray-200">{t('title')}</CardTitle>
-            <CardDescription className="text-sm text-gray-500"></CardDescription>
+            <CardTitle className={`text-3xl font-bold text-gray-200 ${imperial.className}`}>{t('title')}</CardTitle>
+            <CardDescription className={`text-sm text-gray-500 ${tinos.className}`}></CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-row gap-10 ">
+            <div className={`flex flex-row gap-10 ${tinos.className}`}>
               <p
                 className="text-sm font-medium cursor-pointer text-gray-300"
                 onClick={handlePhoneClick}
@@ -83,7 +97,7 @@ export default function Page() {
                 {t('email')}
               </p>
             </div>
-            <div className="flex flex-col gap-4 mt-4">
+            <div className={`flex flex-col gap-4 mt-4 ${tinos.className}`}>
               <div className="flex flex-col md:flex-row gap-4">
                 <Popover>
                   <PopoverTrigger asChild>
@@ -156,4 +170,3 @@ export default function Page() {
     </div>
   );
 }
-

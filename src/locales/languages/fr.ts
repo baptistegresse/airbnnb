@@ -23,7 +23,7 @@ export default {
   },
   "appartement": {
     "title": "Appartement",
-    "description": "Description",
+    "description": "Avec une vue dégagée et sans vis-à-vis, laissez-vous transporter par le luxe et le raffinement. Une cuisine entièrement équipée, un lit queen size. Tout le linge de maison est fourni. Le wifi ainsi qu'un garage sécurisé privatif à votre disposition. Bienvenue en Bourgogne pour un séjour inoubliable",
     "photos": "Photos", 
     "supplementaryPhotos": "Photos supplémentaires",
     "location": "Emplacement",

@@ -86,7 +86,7 @@ export default function Home() {
           loop: true,
         }}
         plugins={[
-          // @ts-expect-error Autoplay plugin types are incompatible
+          // @ts-expect-error missing types in embla-carousel-autoplay
           autoplayPlugin,
         ]}
         setApi={(api) => {

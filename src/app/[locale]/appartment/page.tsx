@@ -40,9 +40,22 @@ import PhotoSupp1 from '@/../public/ps1.avif';
 import PhotoSupp2 from '@/../public/ps2.avif';
 import PhotoSupp3 from '@/../public/ps3.avif';
 import PhotoSupp4 from '@/../public/ps4.avif';
+import { Imperial_Script, Tinos } from 'next/font/google';
 
 import Image from 'next/image';
 import { useScopedI18n } from '@/locales/client';
+
+const libre_baskerville = Imperial_Script({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+});
+
+const roboto = Tinos({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+});
 
 function Page() {
   const t = useScopedI18n('appartement');
@@ -50,9 +63,12 @@ function Page() {
   return (
     <div className="w-screen h-auto bg-gray-800 text-gray-300">
       <div className="w-screen" style={{ height: '55px' }}></div>
+      <div className="w-screen mt-12 h-32 px-4 md:px-60 flex items-center justify-center">
+        <h2 className={`text-xl text-white text-center ${roboto.className}`}>{t('description')}</h2>
+      </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-4xl text-white">{t('livingRoom')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('livingRoom')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
@@ -119,7 +135,7 @@ function Page() {
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-5xl text-white">{t('diningArea')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('diningArea')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
@@ -172,7 +188,7 @@ function Page() {
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-5xl text-white">{t('bedroom')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bedroom')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
@@ -246,7 +262,7 @@ function Page() {
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-5xl text-white">{t('bathroom')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bathroom')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
@@ -271,7 +287,7 @@ function Page() {
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-5xl text-white">{t('exterior')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('exterior')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
@@ -324,7 +340,7 @@ function Page() {
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className="text-5xl text-white">{t('supplementaryPhotos')}</h2>
+        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('supplementaryPhotos')}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
