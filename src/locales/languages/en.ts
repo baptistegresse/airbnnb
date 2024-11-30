@@ -21,13 +21,26 @@ export default {
     "minimumStay": "Minimum stay of 2 nights",
     "confirmationInput": "Send Email",
   },
+  "appartement": {
+    "title": "Apartment",
+    "description": "Description",
+    "photos": "Photos",
+    "supplementaryPhotos": "Additional Photos",
+    "location": "Location",
+    "footer": "Footer",
+    "livingRoom": "Living Room",
+    "diningArea": "Dining Area", 
+    "bedroom": "Bedroom",
+    "bathroom": "Bathroom",
+    "exterior": "Exterior"
+  },
   "components": {
     "navbar": {
       "navigation": {
         "home": "Home",
         "appartment": "Appartment",
         "contact": "Contact",
-        "city": "City",
+        "city": "Dijon",
       },
     },
     "selector": {
