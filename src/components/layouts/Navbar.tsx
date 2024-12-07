@@ -19,6 +19,10 @@ export function Navigation() {
   const t = useScopedI18n('components.navbar');
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Navbar className="z-20 absolute w-full bg-transparent">
       <Navbar.Brand>
@@ -38,19 +42,20 @@ export function Navigation() {
       </button>
       <div className={`${isOpen ? 'block w-screen' : 'hidden'} md:block w-full md:w-auto`}>
         <div className="bg-gray-800 h-screen md:h-auto md:bg-transparent flex flex-col items-center text-center gap-8 pt-8 md:flex-row md:pt-0 md:gap-4">
-          <Link href="/home" className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
+          <Link href="/home" onClick={handleLinkClick} className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
             {t('navigation.home')}
           </Link>
           <Link
             href="/appartment"
+            onClick={handleLinkClick}
             className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}
           >
             {t('navigation.appartment')}
           </Link>
-          <Link href="/contact" className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
+          <Link href="/contact" onClick={handleLinkClick} className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
             {t('navigation.contact')}
           </Link>
-          <Link href="/city" className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
+          <Link href="/city" onClick={handleLinkClick} className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
             {t('navigation.city')}
           </Link>
           <div className="mt-4 md:mt-0 flex justify-center">

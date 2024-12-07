@@ -1,6 +1,6 @@
 'use client';
 
-import { useScopedI18n } from '@/locales/client';
+import { useCurrentLocale, useScopedI18n } from '@/locales/client';
 import { Mail, Phone } from 'lucide-react';
 
 import {
@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { format } from 'date-fns';
+import { fr, enUS } from 'date-fns/locale';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import * as React from 'react';
 
@@ -42,14 +43,21 @@ const tinos = Tinos({
 export default function Page() {
   const [startDate, setStartDate] = React.useState<Date>();
   const [endDate, setEndDate] = React.useState<Date>();
+  const [startOpen, setStartOpen] = React.useState(false);
+  const [endOpen, setEndOpen] = React.useState(false);
   const t = useScopedI18n('contact');
+  const language = useCurrentLocale();
+
+  const dateLocale = language === 'fr' ? fr : enUS;
 
   const handleStartDateChange = (selectedDate: Date | undefined) => {
     setStartDate(selectedDate);
+    setStartOpen(false);
   };
 
   const handleEndDateChange = (selectedDate: Date | undefined) => {
     setEndDate(selectedDate);
+    setEndOpen(false);
   };
 
   const handleSendEmail = () => {
@@ -99,7 +107,7 @@ export default function Page() {
             </div>
             <div className={`flex flex-col gap-4 mt-4 ${tinos.className}`}>
               <div className="flex flex-col md:flex-row gap-4">
-                <Popover>
+                <Popover open={startOpen} onOpenChange={setStartOpen}>
                   <PopoverTrigger asChild>
                     <Button
                       variant={'outline'}
@@ -110,7 +118,7 @@ export default function Page() {
                     >
                       <CalendarIcon className="mr-2 h-4 w-4 text-gray-300" />
                       {startDate ? (
-                        format(startDate, 'PPP')
+                        format(startDate, 'PPP', { locale: dateLocale })
                       ) : (
                         <span>{t('pickStart')}</span>
                       )}
@@ -122,10 +130,11 @@ export default function Page() {
                       selected={startDate}
                       onSelect={handleStartDateChange}
                       initialFocus
+                      locale={dateLocale}
                     />
                   </PopoverContent>
                 </Popover>
-                <Popover>
+                <Popover open={endOpen} onOpenChange={setEndOpen}>
                   <PopoverTrigger asChild>
                     <Button
                       variant={'outline'}
@@ -136,7 +145,7 @@ export default function Page() {
                     >
                       <CalendarIcon className="mr-2 h-4 w-4 text-gray-300" />
                       {endDate ? (
-                        format(endDate, 'PPP')
+                        format(endDate, 'PPP', { locale: dateLocale })
                       ) : (
                         <span>{t('pickEnd')}</span>
                       )}
@@ -148,6 +157,7 @@ export default function Page() {
                       selected={endDate}
                       onSelect={handleEndDateChange}
                       initialFocus
+                      locale={dateLocale}
                     />
                   </PopoverContent>
                 </Popover>

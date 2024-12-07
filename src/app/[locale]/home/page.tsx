@@ -8,15 +8,20 @@ import Image5 from '@/../public/carr5.webp';
 import Image6 from '@/../public/carr6.webp';
 import Image7 from '@/../public/carr7.webp';
 import Image8 from '@/../public/carr8.webp';
+import Image9 from '@/../public/app16.avif';
+import Image10 from '@/../public/c9.avif';
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
+import { useScopedI18n } from '@/locales/client';
 import Autoplay from 'embla-carousel-autoplay';
 import { Imperial_Script, Tinos } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const libre_baskerville = Imperial_Script({
   weight: '400',
@@ -31,8 +36,21 @@ const roboto = Tinos({
 });
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
   const autoplayPlugin = Autoplay({
-    delay: 5000,
+    delay: 4000,
   });
 
   const handleSelect = (index: number) => {
@@ -43,6 +61,8 @@ export default function Home() {
       images[index]?.classList.add('zoomed');
     }, 50);
   };
+
+  const t = useScopedI18n('home');
 
   return (
     <div className="flex relative flex-col h-screen w-screen bg-gray-800 ">
@@ -62,20 +82,20 @@ export default function Home() {
         <h1
           className={`text-white text-8xl md:text-8xl font-bold tracking-wide ${libre_baskerville.className}`}
         >
-          LElégance
+          L Elégance
         </h1>
         <p
           className={`text-gray-100 text-base md:text-xl text-center mt-4 ${roboto.className}`}
         >
-          Appartement haussmannien au cœur de la capitale des Ducs de Bourgogne
+          {t('appartementDescription1')}
           <br />
-          Charme et élégance pour un séjour inoubliable
+            {t("appartementDescription2")}
         </p>
         <Link
           className={`mt-6 bg-purple-500 hover:bg-purple-700 text-white font-bold text-md px-6 py-3 rounded ${roboto.className}`}
           href="/contact"
         >
-          Réservez maintenant
+          {t('ContactUs')}
         </Link>
       </div>
 
@@ -95,6 +115,10 @@ export default function Home() {
               const selectedIndex = api.selectedScrollSnap();
               handleSelect(selectedIndex);
             });
+            // Trigger zoom effect for first image on mount
+            setTimeout(() => {
+              handleSelect(0);
+            }, 50);
           }
         }}
       >
@@ -121,27 +145,31 @@ export default function Home() {
               className="object-cover w-screen h-screen carousel-image"
             />
           </CarouselItem>
-          <CarouselItem>
-            <Image
-              src={Image4}
-              alt="Airbnb Tremouille"
-              className="object-cover w-screen h-screen carousel-image"
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <Image
-              src={Image5}
-              alt="Airbnb Tremouille"
-              className="object-cover w-screen h-screen carousel-image"
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <Image
-              src={Image6}
-              alt="Airbnb Tremouille"
-              className="object-cover w-screen h-screen carousel-image"
-            />
-          </CarouselItem>
+          {!isMobile && (
+            <>
+              <CarouselItem>
+                <Image
+                  src={Image4}
+                  alt="Airbnb Tremouille"
+                  className="object-cover w-screen h-screen carousel-image"
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src={Image5}
+                  alt="Airbnb Tremouille"
+                  className="object-cover w-screen h-screen carousel-image"
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src={Image6}
+                  alt="Airbnb Tremouille"
+                  className="object-cover w-screen h-screen carousel-image"
+                />
+              </CarouselItem>
+            </>
+          )}
           <CarouselItem>
             <Image
               src={Image7}
@@ -153,6 +181,20 @@ export default function Home() {
             <Image
               src={Image8}
               alt="Airbnb Tremouille"
+              className="object-cover w-screen h-screen carousel-image"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src={Image9}
+              alt="Airbnb Tremouille"
+              className="object-cover w-screen h-screen carousel-image"
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src={Image10}
+              alt="Airbnb Tremouille" 
               className="object-cover w-screen h-screen carousel-image"
             />
           </CarouselItem>

@@ -3,10 +3,9 @@ export default {
   "home": {
     "title": "Accueil",
     "appartementName": "L'élégance",
-    "appartementShortDescription": "Description courte de l'appartement",
-    "appartementDescription": "Appartement luxueux style boudoir au cœur d’un immeuble haussmannien. Charme et élégance pour un séjour romantique inoubliable.",
-    "appartementFooter": "Pied de page de l'appartement",
-    "ContactUs": "Contactez-nous",
+    "appartementDescription1": "Appartement haussmannien au cœur de la capitale des Ducs de Bourgogne",
+    "appartementDescription2": "Charme et élégance pour un séjour inoubliable",
+    "ContactUs": "Réservez maintenant",
   },
   "contact": {
     "pleaseSelectDates": "Veuillez sélectionner des dates",
@@ -23,8 +22,8 @@ export default {
   },
   "appartement": {
     "title": "Appartement",
-    "description": "Avec une vue dégagée et sans vis-à-vis, laissez-vous transporter par le luxe et le raffinement. Une cuisine entièrement équipée, un lit queen size. Tout le linge de maison est fourni. Le wifi ainsi qu'un garage sécurisé privatif à votre disposition. Bienvenue en Bourgogne pour un séjour inoubliable",
-    "photos": "Photos", 
+    "description": "Avec une vue dégagée et sans vis-à-vis, laissez-vous transporter par le luxe et le raffinement. Une cuisine entièrement équipée, un lit queen size. Pour votre confort, l'appartement est équipé de la climatisation et de doubles fenêtres assurant une parfaite isolation thermique et phonique. Tout le linge de maison est fourni. Le wifi ainsi qu'un garage sécurisé privatif à votre disposition. Bienvenue en Bourgogne pour un séjour inoubliable.",
+    "photos": "Photos",
     "supplementaryPhotos": "Photos supplémentaires",
     "location": "Emplacement",
     "footer": "Pied de page",

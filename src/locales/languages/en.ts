@@ -3,10 +3,9 @@ export default {
   "home": {
     "title": "Home",
     "appartementName": "L'élégance",
-    "appartementShortDescription": "Appartement short description",
-    "appartementDescription": "Luxurious boudoir-style apartment in the heart of a Haussmannian building. Charm and elegance for an unforgettable romantic stay.",
-    "appartementFooter": "Appartement footer",
-    "ContactUs": "Contact Us",
+    "appartementDescription1": "Haussmann-style apartment in the heart of the capital of the Dukes of Burgundy",
+    "appartementDescription2": "Charm and elegance for an unforgettable stay",
+    "ContactUs": "Book now",
   },
   "contact": {
     "pleaseSelectDates": "Please select dates",
@@ -23,13 +22,13 @@ export default {
   },
   "appartement": {
     "title": "Apartment",
-    "description": "With an unobstructed and private view, let yourself be transported by luxury and refinement. A fully equipped kitchen, a queen size bed. All household linen is provided. WiFi and a private secure garage at your disposal. Welcome to Burgundy for an unforgettable stay",
+    "description": "With an unobstructed and private view, let yourself be transported by luxury and refinement. A fully equipped kitchen and queen size bed. For your comfort, the apartment is equipped with air conditioning and double windows ensuring perfect thermal and sound insulation. All household linen is provided. WiFi and a private secure garage are at your disposal. Welcome to Burgundy for an unforgettable stay.",
     "photos": "Photos",
     "supplementaryPhotos": "Additional Photos",
     "location": "Location",
     "footer": "Footer",
     "livingRoom": "Living Room",
-    "diningArea": "Dining Area", 
+    "diningArea": "Dining Area",
     "bedroom": "Bedroom",
     "bathroom": "Bathroom",
     "exterior": "Exterior"

@@ -15,16 +15,17 @@ import Image13 from '@/../public/app13.avif';
 import Image14 from '@/../public/app14.avif';
 import Image15 from '@/../public/app15.avif';
 import Image16 from '@/../public/app16.avif';
+import Image17 from '@/../public/ps4.avif';
 
 import Chambre1 from '@/../public/c1.avif';
 import Chambre2 from '@/../public/c2.avif';
-import Chambre3 from '@/../public/c3.avif';
 import Chambre4 from '@/../public/c4.avif';
 import Chambre5 from '@/../public/c5.avif';
-import Chambre6 from '@/../public/c6.avif';
 import Chambre7 from '@/../public/c7.avif';
 import Chambre8 from '@/../public/c8.avif';
 import Chambre9 from '@/../public/c9.avif';
+import Chambre10 from '@/../public/ps1.avif';
+import Chambre11 from '@/../public/ps2.avif';
 
 import SalleDeBain1 from '@/../public/sdb1.avif';
 import SalleDeBain2 from '@/../public/sdb2.avif';
@@ -35,11 +36,8 @@ import Exterieur3 from '@/../public/ext3.avif';
 import Exterieur4 from '@/../public/ext4.avif';
 import Exterieur5 from '@/../public/ext5.avif';
 import Exterieur6 from '@/../public/ext6.avif';
+import Exterieur7 from '@/../public/ps3.avif';
 
-import PhotoSupp1 from '@/../public/ps1.avif';
-import PhotoSupp2 from '@/../public/ps2.avif';
-import PhotoSupp3 from '@/../public/ps3.avif';
-import PhotoSupp4 from '@/../public/ps4.avif';
 import { Imperial_Script, Tinos } from 'next/font/google';
 
 import Image from 'next/image';
@@ -63,8 +61,8 @@ function Page() {
   return (
     <div className="w-screen h-auto bg-gray-800 text-gray-300">
       <div className="w-screen" style={{ height: '55px' }}></div>
-      <div className="w-screen mt-12 h-32 px-4 md:px-60 flex items-center justify-center">
-        <h2 className={`text-xl text-white text-center ${roboto.className}`}>{t('description')}</h2>
+      <div className="w-screen mt-12 px-4 md:px-60 py-8 flex items-center justify-center">
+        <h2 className={`text-base md:text-xl text-white text-center max-w-prose ${roboto.className}`}>{t('description')}</h2>
       </div>
 
       <div className="w-screen h-32 ml-4 flex items-center">
@@ -98,6 +96,13 @@ function Page() {
             <Image
               className="h-auto max-w-full rounded-lg"
               src={Image4}
+              alt={''}
+            />
+          </div>
+          <div>
+            <Image
+              className="h-auto max-w-full rounded-lg"
+              src={Image17}
               alt={''}
             />
           </div>
@@ -203,13 +208,6 @@ function Page() {
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
-              src={Chambre3}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
               src={Chambre5}
               alt={''}
             />
@@ -225,6 +223,13 @@ function Page() {
             <Image
               className="h-auto max-w-full rounded-lg"
               src={Chambre9}
+              alt={''}
+            />
+          </div>
+          <div>
+            <Image
+              className="h-auto max-w-full rounded-lg"
+              src={Chambre10}
               alt={''}
             />
           </div>
@@ -247,14 +252,14 @@ function Page() {
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
-              src={Chambre6}
+              src={Chambre8}
               alt={''}
             />
           </div>
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
-              src={Chambre8}
+              src={Chambre11}
               alt={''}
             />
           </div>
@@ -292,6 +297,13 @@ function Page() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
         <div className="grid gap-4">
+          <div>
+            <Image
+              className="h-auto max-w-full rounded-lg"
+              src={Exterieur7}
+              alt={''}
+            />
+          </div>
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
@@ -333,45 +345,6 @@ function Page() {
             <Image
               className="h-auto max-w-full rounded-lg"
               src={Exterieur6}
-              alt={''}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('supplementaryPhotos')}</h2>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={PhotoSupp1}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={PhotoSupp3}
-              alt={''}
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={PhotoSupp2}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={PhotoSupp4}
               alt={''}
             />
           </div>
