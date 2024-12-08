@@ -12,7 +12,7 @@ export default {
     "minimumStayError": "Séjour minimum de 2 nuits",
     "title": "Contact",
     "phoneNumber": "06 69 49 19 59",
-    "email": "saschagre@gmail.com",
+    "email": "saschagre21@gmail.com",
     "contactInfo": "Informations de contact",
     "message": "Je serais intéressé par la réservation de votre appartement.",
     "pickStart": "Choisissez la date d'arrivée",
@@ -22,7 +22,7 @@ export default {
   },
   "appartement": {
     "title": "Appartement",
-    "description": "Avec une vue dégagée et sans vis-à-vis, laissez-vous transporter par le luxe et le raffinement. Une cuisine entièrement équipée, un lit queen size. Pour votre confort, l'appartement est équipé de la climatisation et de doubles fenêtres assurant une parfaite isolation thermique et phonique. Tout le linge de maison est fourni. Le wifi ainsi qu'un garage sécurisé privatif à votre disposition. Bienvenue en Bourgogne pour un séjour inoubliable.",
+    "description": "Avec une vue dégagée et sans vis-à-vis, laissez-vous transporter par le luxe et le raffinement. Situé au deuxième étage et accessible par un ascenseur spacieux, cet appartement dispose d'une cuisine entièrement équipée et d'un lit queen size. Pour votre confort, l'appartement est équipé de la climatisation et de doubles fenêtres assurant une parfaite isolation thermique et phonique. Tout le linge de maison est fourni. Le wifi ainsi qu'un garage sécurisé privatif à votre disposition. Bienvenue en Bourgogne pour un séjour inoubliable.",
     "photos": "Photos",
     "supplementaryPhotos": "Photos supplémentaires",
     "location": "Emplacement",
