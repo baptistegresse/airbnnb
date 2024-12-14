@@ -15,6 +15,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselApi,
 } from '@/components/ui/carousel';
 import { useScopedI18n } from '@/locales/client';
 import Autoplay from 'embla-carousel-autoplay';
@@ -22,6 +23,7 @@ import { Imperial_Script, Tinos } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import type { EmblaPluginType } from 'embla-carousel';
 
 const libre_baskerville = Imperial_Script({
   weight: '400',
@@ -49,9 +51,7 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
-  const autoplayPlugin = Autoplay({
-    delay: 4000,
-  });
+  const autoplayPlugin = Autoplay({ delay: 4000 }) as unknown as EmblaPluginType;
 
   const handleSelect = (index: number) => {
     const images = document.querySelectorAll('.carousel-image');
@@ -89,7 +89,7 @@ export default function Home() {
         >
           {t('appartementDescription1')}
           <br />
-            {t("appartementDescription2")}
+          {t("appartementDescription2")}
         </p>
         <Link
           className={`mt-6 bg-purple-500 hover:bg-purple-700 text-white font-bold text-md px-6 py-3 rounded ${roboto.className}`}
@@ -105,17 +105,13 @@ export default function Home() {
           align: 'start',
           loop: true,
         }}
-        plugins={[
-          // @ts-expect-error missing types in embla-carousel-autoplay
-          autoplayPlugin,
-        ]}
-        setApi={(api) => {
+        plugins={[autoplayPlugin]}
+        setApi={(api: CarouselApi | null) => {
           if (api) {
             api.on('select', () => {
               const selectedIndex = api.selectedScrollSnap();
               handleSelect(selectedIndex);
             });
-            // Trigger zoom effect for first image on mount
             setTimeout(() => {
               handleSelect(0);
             }, 50);
@@ -194,7 +190,7 @@ export default function Home() {
           <CarouselItem>
             <Image
               src={Image10}
-              alt="Airbnb Tremouille" 
+              alt="Airbnb Tremouille"
               className="object-cover w-screen h-screen carousel-image"
             />
           </CarouselItem>
