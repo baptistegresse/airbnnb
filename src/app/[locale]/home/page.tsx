@@ -105,6 +105,7 @@ export default function Home() {
           align: 'start',
           loop: true,
         }}
+        // @ts-expect-error Plugin type mismatch
         plugins={[autoplayPlugin]}
         setApi={(api: CarouselApi | null) => {
           if (api) {
