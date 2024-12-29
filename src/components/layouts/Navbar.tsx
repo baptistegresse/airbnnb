@@ -42,9 +42,9 @@ export function Navigation() {
       </button>
       <div className={`${isOpen ? 'block w-screen' : 'hidden'} md:block w-full md:w-auto`}>
         <div className="bg-gray-800 h-screen md:h-auto md:bg-transparent flex flex-col items-center text-center gap-8 pt-8 md:flex-row md:pt-0 md:gap-4">
-          <Link href="/home" onClick={handleLinkClick} className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
+          {/* <Link href="/home" onClick={handleLinkClick} className={`text-xl font-semibold text-white mt-4 md:mt-0 md:mr-4 ${tinos.className}`}>
             {t('navigation.home')}
-          </Link>
+          </Link> */}
           <Link
             href="/appartment"
             onClick={handleLinkClick}
