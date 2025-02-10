@@ -42,6 +42,7 @@ import { Imperial_Script, Tinos } from 'next/font/google';
 
 import Image from 'next/image';
 import { useScopedI18n } from '@/locales/client';
+import Head from 'next/head';
 
 const libre_baskerville = Imperial_Script({
   weight: '400',
@@ -59,298 +60,306 @@ function Page() {
   const t = useScopedI18n('appartement');
 
   return (
-    <div className="w-screen h-auto bg-gray-800 text-gray-300">
-      <div className="w-screen" style={{ height: '55px' }}></div>
-      <div className="w-screen mt-12 px-4 md:px-60 py-8 flex items-center justify-center">
-        <h2 className={`text-base md:text-xl text-white text-center max-w-prose ${roboto.className}`}>{t('description')}</h2>
-      </div>
+    <>
+      <Head>
+        <title>{t('title')}</title>
+        <meta name="description" content={t('description')} />
+        <meta name="keywords" content="appartement, location, Dijon, Bourgogne, séjour, vacances, luxe, confort" />
+        <meta name="author" content="Airbnb Tremouille" />
+      </Head>
+      <div className="w-screen h-auto bg-gray-800 text-gray-300">
+        <div className="w-screen" style={{ height: '55px' }}></div>
+        <div className="w-screen mt-12 px-4 md:px-60 py-8 flex items-center justify-center">
+          <h2 className={`text-base md:text-xl text-white text-center max-w-prose ${roboto.className}`}>{t('description')}</h2>
+        </div>
 
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('livingRoom')}</h2>
-      </div>
+        <div className="w-screen h-32 ml-4 flex items-center">
+          <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('livingRoom')}</h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image1}
-              alt={''}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image1}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image2}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image3}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image4}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image17}
+                alt={''}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image2}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image3}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image4}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image17}
-              alt={''}
-            />
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image5}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image6}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image7}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image8}
+                alt={''}
+              />
+            </div>
           </div>
         </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image5}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image6}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image7}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image8}
-              alt={''}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('diningArea')}</h2>
-      </div>
+        <div className="w-screen h-32 ml-4 flex items-center">
+          <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('diningArea')}</h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image11}
-              alt={''}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image11}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image13}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image15}
+                alt={''}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image13}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image15}
-              alt={''}
-            />
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image12}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image14}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Image16}
+                alt={''}
+              />
+            </div>
           </div>
         </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image12}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image14}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Image16}
-              alt={''}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bedroom')}</h2>
-      </div>
+        <div className="w-screen h-32 ml-4 flex items-center">
+          <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bedroom')}</h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre1}
-              alt={''}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre1}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre5}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre7}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre9}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre10}
+                alt={''}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre5}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre7}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre9}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre10}
-              alt={''}
-            />
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre2}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre4}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre8}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Chambre11}
+                alt={''}
+              />
+            </div>
           </div>
         </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre2}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre4}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre8}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Chambre11}
-              alt={''}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bathroom')}</h2>
-      </div>
+        <div className="w-screen h-32 ml-4 flex items-center">
+          <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('bathroom')}</h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={SalleDeBain1}
-              alt={''}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={SalleDeBain1}
+                alt={''}
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={SalleDeBain2}
+                alt={''}
+              />
+            </div>
           </div>
         </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={SalleDeBain2}
-              alt={''}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="w-screen h-32 ml-4 flex items-center">
-        <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('exterior')}</h2>
-      </div>
+        <div className="w-screen h-32 ml-4 flex items-center">
+          <h2 className={`text-5xl text-white ${libre_baskerville.className}`}>{t('exterior')}</h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur7}
-              alt={''}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 pr-4">
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur7}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur1}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur3}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur5}
+                alt={''}
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur1}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur3}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur5}
-              alt={''}
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur2}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur4}
-              alt={''}
-            />
-          </div>
-          <div>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={Exterieur6}
-              alt={''}
-            />
+          <div className="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur2}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur4}
+                alt={''}
+              />
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={Exterieur6}
+                alt={''}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

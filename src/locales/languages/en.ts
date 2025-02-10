@@ -9,7 +9,7 @@ export default {
   },
   "contact": {
     "pleaseSelectDates": "Please select dates",
-    "minimumStayError": "Minimum stay of 2 nights",
+    "minimumStayError": "Minimum stay of 1 month",
     "title": "Contact",
     "phoneNumber": "06 69 49 19 59",
     "email": "saschagre21@gmail.com",
@@ -17,8 +17,11 @@ export default {
     "message": "I will be interested in booking your appartement",
     "pickStart": "Pick start date",
     "pickEnd": "Pick end date",
-    "minimumStay": "Minimum stay of 2 nights",
+    "minimumStay": "Minimum stay of 1 month",
     "confirmationInput": "Send Email",
+    "description": "Our rates include weekly cleaning service and replacement of sheets and all linens.",
+    "mediumStayPrice": "Medium stay rate (1 to 3 months): €2,360 monthly",
+    "longStayPrice": "Long stay rate (over 3 months): €2,180 monthly",
   },
   "appartement": {
     "title": "Apartment",
@@ -38,7 +41,7 @@ export default {
       "navigation": {
         "home": "Home",
         "appartment": "Appartment",
-        "contact": "Contact",
+        "contact": "Contact / Prices",
         "city": "Dijon",
       },
     },

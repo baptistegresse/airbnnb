@@ -27,7 +27,6 @@ import {
 import { cn } from '@/lib/utils';
 import { Imperial_Script, Tinos } from 'next/font/google';
 
-
 const imperial = Imperial_Script({
   weight: '400',
   style: 'normal',
@@ -66,7 +65,7 @@ export default function Page() {
       return;
     }
     const dateDifference = (endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24);
-    if (dateDifference < 2) {
+    if (dateDifference < 30) {
       alert(t('minimumStayError'));
       return;
     }
@@ -86,7 +85,13 @@ export default function Page() {
         <Card className="shadow-lg rounded-lg overflow-hidden bg-gray-900">
           <CardHeader className="p-4">
             <CardTitle className={`text-3xl font-bold text-gray-200 ${imperial.className}`}>{t('title')}</CardTitle>
-            <CardDescription className={`text-sm text-gray-500 ${tinos.className}`}></CardDescription>
+            <CardDescription className={`text-sm text-gray-300 ${tinos.className}`}>
+              {t('description')}
+              <br />
+              {t('mediumStayPrice')}
+              <br />
+              {t('longStayPrice')}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className={`flex flex-row gap-10 ${tinos.className}`}>

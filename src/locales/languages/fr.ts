@@ -9,7 +9,7 @@ export default {
   },
   "contact": {
     "pleaseSelectDates": "Veuillez sélectionner des dates",
-    "minimumStayError": "Séjour minimum de 2 nuits",
+    "minimumStayError": "Séjour minimum de 1 mois",
     "title": "Contact",
     "phoneNumber": "06 69 49 19 59",
     "email": "saschagre21@gmail.com",
@@ -17,8 +17,11 @@ export default {
     "message": "Je serais intéressé par la réservation de votre appartement.",
     "pickStart": "Choisissez la date d'arrivée",
     "pickEnd": "Choisissez la date de départ",
-    "minimumStay": "Séjour minimum de 2 nuits",
+    "minimumStay": "Séjour minimum de 1 mois",
     "confirmationInput": "Envoyer l'email",
+    "description": "Nos tarifs comprennent une prestation de ménage par semaine ainsi que le remplacement des draps et de tout le linge.",
+    "mediumStayPrice": "Tarif moyen séjour (1 à 3 mois): 2360€ mensuel",
+    "longStayPrice": "Tarif long séjour (supérieur à 3 mois): 2180€ mensuel",
   },
   "appartement": {
     "title": "Appartement",
@@ -38,7 +41,7 @@ export default {
       "navigation": {
         "home": "Accueil",
         "appartment": "Appartement",
-        "contact": "Contact",
+        "contact": "Contact / Tarifs",
         "city": "Dijon",
       },
     },
